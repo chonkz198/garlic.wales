@@ -1,0 +1,103 @@
+body, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: 'Garlic Sans Regular';
+  src: url('./Garlic-Sans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, #app, #header, #footer, #header a, #footer a {
+  font-family: 'Garlic Sans Regular', sans-serif;
+}
+
+#app {
+  touch-action: pan-up;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 100px #ffffff, 0 0 10px #000, 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  padding-left: 20px; /* Adjust the padding as needed */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 80px;
+  text-transform: uppercase;
+  max-width: 800px; /* Added max-width */
+  margin: 0 auto; /* Center horizontally within the max-width */
+}
+
+#app a {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px; /* Added max-width */
+  margin: 0 auto; /* Center horizontally within the max-width */
+}
+
+#app canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+#hero { 
+  padding-right: 20px; /* Adjust the padding as needed */
+  padding-left: 20px; /* Adjust the padding as needed */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.garlicImage {
+	padding-top: 120px;
+  width: 40vw;
+  max-width: 600px;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  max-width: 1000px;
+  background-color: #ffa07a;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+  border-radius: 30px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
