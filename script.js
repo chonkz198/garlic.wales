@@ -16,3 +16,20 @@ backgroundContainer.id = 'background';
 
 
 document.body.appendChild(backgroundContainer);
+  document.addEventListener('DOMContentLoaded', function () {
+    createGarlicBulbs();
+  });
+
+  function createGarlicBulbs() {
+    const numGarlicBulbsPerSide = 6;
+    const middleGarlicBulbIndex = Math.floor(numGarlicBulbsPerSide / 2);
+    const totalGarlicBulbs = numGarlicBulbsPerSide * 2 - 1;
+
+    for (let i = 0; i < totalGarlicBulbs; i++) {
+      if (i !== middleGarlicBulbIndex) {
+        const garlicBulb = document.createElement('div');
+        garlicBulb.className = 'garlic-bulb ' + (i < middleGarlicBulbIndex ? 'left' : 'right');
+        document.body.appendChild(garlicBulb);
+      }
+    }
+  }
